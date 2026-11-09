@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ranjith Y | Portfolio</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --card: #f3f4f6;
+      --border: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Segoe UI", Calibri, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+
+    nav {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .logo { font-weight: 700; color: var(--accent); text-decoration: none; }
+
+    nav ul { list-style: none; display: flex; gap: 1.25rem; }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover { color: var(--accent); }
+
+    section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 3.5rem 1.25rem;
+    }
+
+    .hero { padding-top: 5rem; padding-bottom: 4rem; }
+
+    .hero h1 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 0.5rem; }
+
+    .hero .role { color: var(--accent); font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; }
+
+    .hero p.intro { color: var(--muted); max-width: 620px; margin-bottom: 1.5rem; }
+
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .btn-primary { background: var(--accent); color: #fff; }
+
+    .btn-outline { border: 1px solid var(--accent); color: var(--accent); }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+    }
+
+    .about p { max-width: 680px; color: var(--muted); margin-bottom: 1rem; }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .skill {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .project {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      background: var(--bg);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .project:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transform: translateY(-3px);
+    }
+
+    .project h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+
+    .project p { color: var(--muted); font-size: 0.95rem; margin-bottom: 0.75rem; }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      background: var(--card);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      margin: 0 0.3rem 0.3rem 0;
+      color: var(--text);
+    }
+
+    .contact { text-align: center; }
+
+    .contact p { color: var(--muted); margin-bottom: 1.25rem; }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.25rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 3rem; }
+      .hero h1 { font-size: 2rem; }
+      nav ul { gap: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#home" class="logo">Ranjith Y</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Hi, I'm Ranjith.</h1>
+    <p class="role">BCA Student | Aspiring Web Developer</p>
+    <p class="intro">I'm a BCA student at PES University who enjoys building clean, responsive websites and turning data into clear results.</p>
+    <a href="#projects" class="btn btn-primary">View My Work</a>
+    <a href="#contact" class="btn btn-outline">Contact Me</a>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <p>I'm studying Bachelor of Computer Applications at PES University, RR Campus. I completed an Artificial Intelligence internship at Krutanic and have hands-on experience building web applications with HTML, CSS, JavaScript, and MySQL.</p>
+    <p>I'm looking for an internship where I can keep improving my front-end skills and learn how real websites are built.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Java</div>
+      <div class="skill">Python</div>
+      <div class="skill">MySQL</div>
+      <div class="skill">Git &amp; GitHub</div>
+      <div class="skill">Microsoft Excel</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Medo Time: Smart Healthcare Monitoring</h3>
+        <p>A web-based system for medication reminders, prescription management, and patient health records, with a responsive interface and role-based login.</p>
+        <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">MySQL</span>
+      </div>
+      <div class="project">
+        <h3>E-commerce Sales Analytics</h3>
+        <p>Analyzed 1,000 e-commerce orders and built an interactive Excel dashboard covering sales, profit, and margin by category, region, and month.</p>
+        <span class="tag">Excel</span><span class="tag">PivotTables</span><span class="tag">Dashboards</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 style="text-align:left;">Contact</h2>
+    <p>Feel free to reach out for internships or project opportunities.</p>
+    <a href="mailto:Ranjithgowda616@gmail.com" class="btn btn-primary">Email Me</a>
+    <a href="https://linkedin.com/in/ranjith-y08" class="btn btn-outline">LinkedIn</a>
+    <a href="https://github.com/ranjith0819201/ranjith" class="btn btn-outline">GitHub</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Ranjith Y. Built with HTML and CSS.</p>
+  </footer>
+
+</body>
+</html>
